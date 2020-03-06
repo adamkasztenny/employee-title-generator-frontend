@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.css';
+import EmployeeTitleGenerator from './EmployeeTitleGenerator';
 
 function App() {
   return (
-	  <h1>Employee Title Generator</h1>
+	  <div>
+		  <h1>Employee Title Generator</h1>
+		  <EmployeeTitleGenerator />
+	  </div>
   );
 }
 

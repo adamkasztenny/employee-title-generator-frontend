@@ -1,4 +1,5 @@
 start_development:
-	yarn start	
+	yarn start
+
 test:
 	CI=true yarn test --coverage
