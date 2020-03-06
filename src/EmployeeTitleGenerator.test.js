@@ -9,11 +9,11 @@ test('renders employee title', async () => {
 
   render(<EmployeeTitleGenerator />);
 
-  checkContainsTitle(title);
+  checkDisplaysTitle(title);
   expect(fetch.mock.calls.length).toBe(1);
 });
 
-test('renders a new employee title on mouse click', async () => {
+test('renders a new employee title on button click', async () => {
   const originalTitle = faker.company.bs();
   setupMockAPICall(originalTitle);
 
@@ -23,7 +23,7 @@ test('renders a new employee title on mouse click', async () => {
   setupMockAPICall(newTitle);
 
   clickButton();
-  checkContainsTitle(newTitle);
+  checkDisplaysTitle(newTitle);
   expect(fetch.mock.calls.length).toBe(1);
 });
 
@@ -34,7 +34,7 @@ function setupMockAPICall(title) {
   fetch = jest.fn().mockImplementation(() => Promise.resolve({json: mockJsonFunction}))
 }
 
-async function checkContainsTitle(title) {
+async function checkDisplaysTitle(title) {
   const renderedTitle = await screen.findByText(title);
   expect(renderedTitle.innerHTML).toMatch(title);
 }
