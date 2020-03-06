@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './EmployeeTitleGenerator.css';
 
 const API_URL = '/employee-title';
 
@@ -15,11 +16,10 @@ class EmployeeTitleGenerator extends Component {
 
   render() {
     return (
-      <div>
-        <h4> Your title is: </h4>
-        <h2>{this.state.title}</h2>
+      <div class="container center-contents">
+        <h2> Your title is: {this.state.title}</h2>
 
-	<button onClick={this.fetchTitle}>Generate a new title</button>
+	<button type="button" class="btn btn-primary" onClick={this.fetchTitle}>Generate a new title</button>
       </div>
     );
   }
