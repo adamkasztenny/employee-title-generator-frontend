@@ -17,4 +17,7 @@ RUN mv nginx.conf /etc/nginx/conf.d/default.conf
 WORKDIR /
 RUN rm -rf /src
 
+RUN addgroup -S employee-title-generator && adduser -S employee-title-generator -G employee-title-generator
+USER employee-title-generator
+
 EXPOSE 8081
