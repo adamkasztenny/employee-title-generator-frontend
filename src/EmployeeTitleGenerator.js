@@ -16,10 +16,10 @@ class EmployeeTitleGenerator extends Component {
 
   render() {
     return (
-      <div class="container center-contents">
+      <div className="container center-contents">
         <h2> Your title is: {this.state.title}</h2>
 
-	<button type="button" class="btn btn-primary" onClick={this.fetchTitle}>Generate a new title</button>
+	<button type="button" className="btn btn-primary" onClick={this.fetchTitle}>Generate a new title</button>
       </div>
     );
   }
