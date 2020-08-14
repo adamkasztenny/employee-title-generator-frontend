@@ -1,5 +1,9 @@
 PROJECT="employee-title-generator-frontend"
 
+ci:
+	$(MAKE) build
+	$(MAKE) test
+
 .PHONY: build
 build:
 	docker build --no-cache -t ${PROJECT} .
